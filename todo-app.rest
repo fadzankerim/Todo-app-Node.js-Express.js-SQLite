@@ -1,0 +1,55 @@
+
+### GET / ENDPOINT 
+GET http://localhost:6464
+
+### POST REQUEST USER REGISTRATION auth/register
+
+POST http://localhost:6464/auth/register
+Content-Type: application/json
+
+{
+    "username":"kera@gmail.com",
+    "password":"kera123kera"
+}
+
+
+### POST REQUEST  USER LOGIN  auth/login
+
+POST http://localhost:6464/auth/login
+Content-Type: application/json
+
+{
+    "username":"kera@gmail.com",
+    "password":"kera123kera"
+}
+
+### FETCH ALL TODOS endpoint GET /todos (protected)
+
+GET http://localhost:6464/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM4OTMyOTA4LCJleHAiOjE3MzkwMTkzMDh9.e4GDMRrGhkVOprM-Xmw78pumHrHpMlqPyHL9Tr10ph0
+
+### CREATE A NEW TODO POST /todos (protected)
+
+POST http://localhost:6464/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM4OTMyOTA4LCJleHAiOjE3MzkwMTkzMDh9.e4GDMRrGhkVOprM-Xmw78pumHrHpMlqPyHL9Tr10ph0
+Content-Type: application/json
+
+{
+    "task": "Finish coding the project"
+}
+
+### UPADE A TODO PUT /todos/:id (protected)
+
+PUT http://localhost:6464/todos/2
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM4OTMyOTA4LCJleHAiOjE3MzkwMTkzMDh9.e4GDMRrGhkVOprM-Xmw78pumHrHpMlqPyHL9Tr10ph0
+Content-Type: application/json
+
+{
+    "completed":1
+}
+
+### DELETING A TODO DELETE /todos/:id (protected)
+
+DELETE http://localhost:6464/todos/2
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM4OTMyOTA4LCJleHAiOjE3MzkwMTkzMDh9.e4GDMRrGhkVOprM-Xmw78pumHrHpMlqPyHL9Tr10ph0
+
